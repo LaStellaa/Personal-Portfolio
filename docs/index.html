@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Give+You+Glory&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./index.css" />
+    <title>Stella's Portfolio</title>
+  </head>
+  <body class="flex">
+    <header class="flex">
+      <div class="logo-container flex">
+        <img
+          src="./images/personal-logo.png"
+          alt="personal logo"
+          class="logo"
+        />
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+      </div>
+
+      <nav>
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation flex"
+        >
+          <li class="active uppercase"><a href="#about">About</a></li>
+          <li class="uppercase"><a href="#projects">Projects</a></li>
+          <li class="uppercase"><a href="#packages">Packages</a></li>
+          <li class="uppercase"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="flex">
+      <section class="hero" id="about">
+        <h1>
+          Hi! I'm Stella and i am a
+          <span class="uppercase job-title"
+            ><span class="text"></span
+            ><span class="cursor" aria-hidden="true">|</span></span
+          >
+        </h1>
+        <div class="about-container flex">
+          <p class="about-text">
+            I create
+            <span id="modern">modern</span>, <span id="awesome">awesome</span>,
+            <span id="functional">functional</span>
+            <span id="text-span"
+              >websites and i would love to work on your next project!</span
+            >
+          </p>
+          <img class="profile-image" src="./images/avatar.avif" alt="myself" />
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <h2>Some of my work</h2>
+        <div class="projects-container">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <a
+                  href="https://project1.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="./images/projects/news-homapage.png"
+                    alt="Screenshot of Article webpage"
+                    class="project-image project-image-news"
+                  />
+                </a>
+              </div>
+              <div class="card-back">
+                <h3 class="project-title-back">News Homepage</h3>
+                <p class="project-description-back">
+                  A clean and modern news website layout. It has a featured
+                  article section, a list of the latest news, and smooth hover
+                  effects. Fully responsive across mobile, tablet, and desktop
+                  screens.
+                </p>
+              </div>
+            </div>
+            <h3 class="project-title">News Homepage</h3>
+            <p class="project-description">
+              A clean and modern news website layout. It has a featured article
+              section, a list of the latest news, and smooth hover effects.
+              Fully responsive across mobile, tablet, and desktop screens.
+            </p>
+          </article>
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <a
+                  href="https://project2.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="./images/projects/e-commerce-shop.png"
+                    alt="E-commerce shoes shop webpage"
+                    class="project-image"
+                  />
+                </a>
+              </div>
+              <div class="card-back">
+                <h3 class="project-title-back">E-commerce Shop Homepage</h3>
+                <p class="project-description-back">
+                  A simple and interactive product page for an online store. It
+                  includes an image gallery with a lightbox, product details,
+                  and a shopping cart feature. Fully responsive and
+                  user-friendly.
+                </p>
+              </div>
+            </div>
+            <h3 class="project-title">E-commerce Shop Homepage</h3>
+            <p class="project-description">
+              A simple and interactive product page for an online store. It
+              includes an image gallery with a lightbox, product details, and a
+              shopping cart feature. Fully responsive and user-friendly.
+            </p>
+          </article>
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <a
+                  href="https://project3.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="./images/projects/single-page-portfolio.png"
+                    alt="Single page portfolio"
+                    class="project-image project-image-portfolio"
+                  />
+                </a>
+              </div>
+              <div class="card-back">
+                <h3 class="project-title-back">Single Page Portfolio</h3>
+                <p class="project-description-back">
+                  A personal portfolio page to showcase projects and skills.
+                  Clean layout with smooth scrolling and responsive design,
+                  making it easy to view on any device.
+                </p>
+              </div>
+            </div>
+            <h3 class="project-title">Single Page Portfolio</h3>
+            <p class="project-description">
+              A personal portfolio page to showcase projects and skills. Clean
+              layout with smooth scrolling and responsive design, making it easy
+              to view on any device.
+            </p>
+          </article>
+          <!-- Project 4 -->
+          <article class="project-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <a
+                  href="https://project4.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="./images/projects/room-branding-landing-page.png"
+                    alt="Room brand landing page"
+                    class="project-image"
+                  />
+                </a>
+              </div>
+              <div class="card-back">
+                <h3 class="project-title-back">Room Brand Landing Page</h3>
+                <p class="project-description-back">
+                  A stylish landing page for a furniture brand. It features a
+                  modern layout with hero images, product highlights, and smooth
+                  navigation. Fully responsive for all screen sizes.
+                </p>
+              </div>
+            </div>
+            <h3 class="project-title">Room Brand Landing Page</h3>
+            <p class="project-description">
+              A stylish landing page for a furniture brand. It features a modern
+              layout with hero images, product highlights, and smooth
+              navigation. Fully responsive for all screen sizes.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="packages flex" id="packages">
+        <h3>Available Packages</h3>
+        <div class="packages-offers flex">
+          <div class="package-one">
+            <div class="package-header">
+              <h4>One-Page Website</h4>
+            </div>
+            <ul class="package-list">
+              <li>Basic Responsive Design</li>
+              <li>Simple Contact Form</li>
+              <li>Social Media Integration</li>
+              <li>One Revision</li>
+            </ul>
+            <p class="package-desc">
+              Perfect for small businesses, personal projects, or landing pages.
+            </p>
+            <p class="package-price">Starting from $250</p>
+          </div>
+          <div class="package-two">
+            <div class="package-header">
+              <h4>Multi-page Website</h4>
+            </div>
+            <ul class="package-list">
+              <li>Up to 5 pages</li>
+              <li>Advance Responsive Design</li>
+              <li>Complete contact Form</li>
+              <li>SEO Optimization</li>
+              <li>Hosting setup</li>
+              <li>Two Revisions</li>
+            </ul>
+            <p class="package-desc">
+              Ideal for businesses needing more content and features.
+            </p>
+            <p class="package-price">Starting from $400</p>
+          </div>
+          <div class="package-three">
+            <div class="package-header">
+              <h4>Website Refresh</h4>
+            </div>
+            <ul class="package-list">
+              <li>Design Improvements</li>
+              <li>Mobile Responsiveness Check</li>
+              <li>Performance & Speed Optimization</li>
+            </ul>
+            <p class="package-desc">
+              For existing websites needing a facelift.
+            </p>
+            <p class="package-price">Starting from $200</p>
+          </div>
+        </div>
+        <section class="contact flex" id="contact">
+          <div class="solution-container flex">
+            <img
+              src="./images/sparkle.svg"
+              alt="sparkles icon"
+              class="sparkle-icon"
+            />
+
+            <h2 class="contact-paragraph">Every project is unique</h2>
+            <img
+              src="./images/sparkle.svg"
+              alt="sparkles icon"
+              class="sparkle-icon sparkle-icon-two"
+            />
+          </div>
+          <h3 class="last-paragraph">
+            Let's discuss your goals and build the best solution together!
+          </h3>
+          <button
+            class="contact-btn uppercase"
+            type="button"
+            onclick="window.location.href='form.html'"
+          >
+            Contact me
+          </button>
+        </section>
+      </section>
+    </main>
+    <footer class="contact" id="contact"></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
