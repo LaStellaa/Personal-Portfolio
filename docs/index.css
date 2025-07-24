@@ -163,6 +163,7 @@ main {
   padding-block: 2.5rem;
   /* padding: clamp(1rem, 2vw + 1rem, 3rem); */
   padding-top: 0;
+  padding-bottom: 4rem;
 }
 
 header {
@@ -208,6 +209,9 @@ header {
 .mobile-nav-toggle {
   display: block;
   margin-block: auto;
+  position: fixed;
+  top: clamp(1rem, 4.3vw + 1.1rem, 5rem);
+  right: clamp(1rem, 4.4vw + 1.1rem, 5rem);
   z-index: 2000;
   background: transparent;
   background-image: url(./Images/menu\ icon\ open.svg);
@@ -309,7 +313,8 @@ h1 {
   line-height: 1.7;
 }
 
-/* Projects Section */
+/* ========= Projects Section ========= */
+
 .projects {
   width: 100%;
   padding: 4rem 1rem;
@@ -501,7 +506,7 @@ h1 {
   margin-block: 1rem;
 }
 
-/* Contact Section */
+/* ========= Contact Section ========= */
 
 .contact {
   flex-direction: column;
@@ -554,14 +559,16 @@ h1 {
   background-position: right center;
 }
 
-/* Consultation Form Styling */
+/* ========= Consultation Form Styling ========= */
+
 .body-form {
-  padding: 1rem;
+  padding: clamp(1rem, 2vw + 1rem, 3rem);
 }
 
 .main-form {
   flex-direction: column;
   padding-top: 1rem;
+  --gap: 3rem;
 }
 
 .main-form p {
@@ -579,12 +586,27 @@ form {
 
 form input {
   margin-top: -1.7rem;
-  height: 3rem;
+  height: clamp(3rem, 6vw + 1rem, 5rem);
   border-radius: 5px;
   border: 1px solid grey;
+  padding: 0.5rem;
 }
 
-.error-email {
+form input:focus,
+form textarea:focus {
+  outline: 2px solid #007acc;
+  outline-offset: 2px;
+  border-color: #007acc;
+}
+
+form input[aria-invalid="true"],
+form textarea[aria-invalid="true"] {
+  border-color: orangered;
+  outline-color: orangered;
+}
+
+.error-email,
+.error-name {
   color: orangered;
   margin-top: -1.5rem;
   text-align: left !important;
@@ -595,133 +617,30 @@ form textarea {
   border-radius: 5px;
   border: 1px solid grey;
   margin-top: -1.7rem;
-  height: 8rem;
-  padding: 0.3rem;
+  height: clamp(8rem, 20vw + 1rem, 15rem);
+  padding: 0.5rem;
 }
 
-/* FLIP EFFECT & 2-COLUMN LAYOUT FOR DESKTOP */
-@media (min-width: 768px) {
-  .projects-container {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
-    max-width: 1100px;
-    overflow-x: hidden;
-    padding: 1rem;
-  }
-
-  .project-card {
-    perspective: 1200px;
-    padding: 2.5rem 0 2rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card-inner {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16/9;
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transform-style: preserve-3d;
-    display: block;
-  }
-
-  .project-card:hover .card-inner,
-  .project-card:focus-within .card-inner {
-    transform: rotateY(180deg);
-  }
-
-  .card-front,
-  .card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0.5rem 1.5rem;
-    border-bottom: 1px solid lightcyan;
-  }
-
-  .card-front {
-    z-index: 2;
-    background: #4a4a4a;
-    justify-content: flex-start;
-  }
-
-  .project-title {
-    display: block;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #f0f0f0;
-    border-bottom: none;
-    width: auto;
-    padding-bottom: none;
-  }
-
-  .project-description {
-    display: none;
-  }
-
-  .card-back {
-    background: #4a4a4a;
-    transform: rotateY(180deg);
-    z-index: 3;
-    text-align: center;
-  }
-
-  .project-title-back {
-    display: none;
-  }
-
-  .project-description-back {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-  }
+.request-btn {
+  cursor: pointer;
+  width: clamp(250px, 50vw, 400px);
+  place-self: center;
+  margin-top: 1rem;
+  padding-block: 1rem;
+  border-radius: 15px;
+  font-weight: 400;
+  font-size: var(--fs-500);
+  border: none;
+  background-color: #d2fba4;
 }
 
-@media (min-width: 1440px) {
-  .project-description-back {
-    font-size: 1.15rem;
-    line-height: 1.7;
-  }
+.request-btn:focus {
+  outline: 2px solid #007acc;
+  outline-offset: 2px;
 }
 
-.project-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  aspect-ratio: 16/9;
-  display: block;
-  background: transparent;
-  box-shadow: 0 4px 16px rgba(249, 247, 247, 0.1),
-    0 1.5px 4px rgba(240, 238, 238, 0.08);
-}
-
-.project-image-portfolio {
-  background: rgb(255, 247, 240);
-}
-
-.project-image-news {
-  background: hsl(36, 100%, 99%);
-}
-
-.project-card a {
-  border-radius: 6px;
-  overflow: hidden;
-  display: block;
-  width: 100%;
+.request-btn:hover {
+  background-color: #c8f799;
 }
 
 /* ===========================
@@ -822,8 +741,111 @@ form textarea {
     font-size: var(--fs-400);
   }
 
+  /* ========= Project Section ========= */
+
+  .projects-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    overflow-x: hidden;
+    padding: 1rem;
+  }
+
+  .project-card {
+    perspective: 1200px;
+    padding: 2.5rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+    display: block;
+  }
+
+  .project-card:hover .card-inner,
+  .project-card:focus-within .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5rem 1.5rem;
+    border-bottom: 1px solid lightcyan;
+  }
+
+  .card-front {
+    z-index: 2;
+    background: #4a4a4a;
+    justify-content: flex-start;
+  }
+
+  .project-title {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #f0f0f0;
+    border-bottom: none;
+    width: auto;
+    padding-bottom: none;
+  }
+
+  .project-description {
+    display: none;
+  }
+
+  .card-back {
+    background: #4a4a4a;
+    transform: rotateY(180deg);
+    z-index: 3;
+    text-align: center;
+  }
+
+  .project-title-back {
+    display: none;
+  }
+
+  .project-description-back {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+  }
+
   .package-list {
     width: 350px;
+  }
+
+  /* ========= Form Section ========= */
+
+  form {
+    width: 70%;
+    max-width: 600px;
+    align-self: center;
+  }
+
+  .main-form p {
+    max-width: 600px;
   }
 }
 
@@ -895,16 +917,13 @@ form textarea {
     max-width: 500px;
   }
 
-  #awesome {
+  #awesome,
+  #functional {
     font-size: var(--fs-600);
   }
 
   #modern {
     font-size: var(--fs-700);
-  }
-
-  #functional {
-    font-size: var(--fs-600);
   }
 
   .job-title {
@@ -933,12 +952,14 @@ form textarea {
   }
 
   /* ========= Packages Section ========= */
+
   .packages-offers {
     flex-direction: row;
     justify-content: space-between;
     gap: 2rem;
     align-items: flex-start;
   }
+
   .packages-offers > div {
     flex: 1;
     max-width: 320px;
@@ -951,15 +972,18 @@ form textarea {
     justify-content: flex-start;
     padding-bottom: 2rem;
   }
+
   .package-list {
     flex-grow: 1;
     width: 300px;
   }
+
   .package-price {
     margin-top: 1.2rem;
     font-weight: 500;
     font-size: 1.18rem;
   }
+
   .package-header {
     min-height: 110px;
     display: flex;
@@ -967,30 +991,44 @@ form textarea {
     justify-content: flex-end;
     width: 100%;
   }
+
   .packages-offers > div h4 {
     margin-top: 0;
     padding-top: 0;
   }
+
   .packages-offers p,
   .package-header p {
     max-width: 340px;
     margin-left: auto;
     margin-right: auto;
   }
+
   .package-header p {
     margin-top: 0;
   }
 
-  /* Larger font size for package section p and ul on large screens */
   .packages-offers p,
   .packages-offers ul {
     font-size: 1.1rem;
   }
+
   .packages-offers ul li {
     font-size: 1.18rem;
   }
+
   .packages-offers .package-list {
     min-height: 302px;
+  }
+
+  /* ========= Form Section ========= */
+
+  .main-form {
+    justify-content: center;
+  }
+
+  .main-form p {
+    font-size: var(--fs-600);
   }
 }
 
@@ -1000,7 +1038,7 @@ form textarea {
   }
 
   main {
-    padding-top: 11rem;
+    padding-top: 8rem;
   }
 
   header {
@@ -1057,38 +1095,53 @@ form textarea {
     font-size: var(--fs-500);
   }
 
+  .contact-btn {
+    margin-bottom: 5rem;
+  }
+
+  /* ========= Projects Section ========= */
+
   .projects-container {
     max-width: 1200px;
   }
+
+  .project-description-back {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    aspect-ratio: 16/9;
+    display: block;
+    background: transparent;
+    box-shadow: 0 4px 16px rgba(249, 247, 247, 0.1),
+      0 1.5px 4px rgba(240, 238, 238, 0.08);
+  }
+
+  .project-image-portfolio {
+    background: rgb(255, 247, 240);
+  }
+
+  .project-image-news {
+    background: hsl(36, 100%, 99%);
+  }
+
+  .project-card a {
+    border-radius: 6px;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+  }
+
+  /* ========= Packages Section ========= */
 
   .packages-offers {
     gap: 3.5rem;
   }
 
-  .contact-btn {
-    margin-bottom: 5rem;
-  }
-}
-
-/* ===========================
-   Animations Section
-   =========================== */
-
-.cursor {
-  animation: blinkCursor 1.2s steps(1) infinite;
-}
-
-@keyframes blinkCursor {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
-@media (min-width: 1440px) {
   .packages-offers > div {
     max-width: 380px;
     min-height: 500px;
@@ -1110,5 +1163,29 @@ form textarea {
   }
   .package-price {
     font-size: 1.28rem;
+  }
+
+  /* ========= Form Section ========= */
+
+  form label {
+    font-size: var(--fs-500);
+  }
+}
+
+/* ===========================
+   Animations Section
+   =========================== */
+
+.cursor {
+  animation: blinkCursor 1.2s steps(1) infinite;
+}
+
+@keyframes blinkCursor {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
 }
