@@ -209,7 +209,7 @@ header {
 .mobile-nav-toggle {
   display: block;
   margin-block: auto;
-  position: fixed;
+  /* position: fixed; */
   top: clamp(1rem, 4.3vw + 1.1rem, 5rem);
   right: clamp(1rem, 4.4vw + 1.1rem, 5rem);
   z-index: 2000;
@@ -224,6 +224,7 @@ header {
 
 .mobile-nav-toggle[aria-expanded="true"] {
   background-image: url(./Images/menu\ icon\ close.svg);
+  position: fixed;
 }
 
 .mobile-nav-toggle:focus-visible {
@@ -391,7 +392,7 @@ h1 {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   aspect-ratio: 16/9;
   margin: 0 auto;
 }
@@ -559,6 +560,104 @@ h1 {
   background-position: right center;
 }
 
+/* ========= Mobile Social Section ========= */
+
+.mobile-social-section {
+  margin-top: auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.mobile-social-links {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  --gap: 1.5rem;
+}
+
+.social-link {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: var(--fs-400);
+  padding: 0.6rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ========= Footer ========= */
+
+.footer-social {
+  background: black;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  --gap: 1.5rem;
+}
+
+.footer-social-links {
+  flex-direction: row;
+  align-items: center;
+  --gap: 1.5rem;
+}
+
+.footer-social-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--fs-500);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.footer-social-link svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.footer-text {
+  text-align: center;
+  color: white;
+  font-size: var(--fs-300);
+  margin: 0;
+}
+
 /* ========= Consultation Form Styling ========= */
 
 .body-form {
@@ -641,6 +740,19 @@ form textarea {
 
 .request-btn:hover {
   background-color: #c8f799;
+}
+
+/* ========= Success Message ========= */
+
+.success-message {
+  display: none;
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 2rem;
+  background: #d2fba4;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* ===========================
@@ -836,6 +948,24 @@ form textarea {
     width: 350px;
   }
 
+  /* ========= Footer Tablet+ ========= */
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    --gap: 1rem;
+  }
+
+  .footer-social-links {
+    order: 1;
+    align-self: flex-end;
+  }
+
+  .footer-text {
+    order: 2;
+    align-self: flex-start;
+  }
+
   /* ========= Form Section ========= */
 
   form {
@@ -888,6 +1018,11 @@ form textarea {
   }
 
   .mobile-nav-toggle {
+    display: none;
+  }
+
+  /* Hide mobile social section on desktop */
+  .mobile-social-section {
     display: none;
   }
 
@@ -1030,15 +1165,28 @@ form textarea {
   .main-form p {
     font-size: var(--fs-600);
   }
+
+  .success-message {
+    width: 60%;
+    align-self: center;
+  }
+
+  /* ========= Footer Desktop ========= */
+
+  .footer-social {
+    padding: 2.5rem 2rem;
+  }
 }
 
 @media (min-width: 1440px) {
   body {
-    flex-direction: row;
+    flex-direction: column;
   }
 
-  main {
-    padding-top: 8rem;
+  .main-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
   }
 
   header {
@@ -1056,6 +1204,11 @@ form textarea {
     --gap: 6rem;
     position: sticky;
     top: 0;
+  }
+
+  main {
+    padding-top: 8rem;
+    flex: 1;
   }
 
   .logo {
@@ -1169,6 +1322,38 @@ form textarea {
 
   form label {
     font-size: var(--fs-500);
+  }
+
+  /* ========= Footer Large Desktop ========= */
+
+  .footer-social {
+    padding: 3rem 2rem;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    --gap: 0;
+  }
+
+  .footer-social-links {
+    --gap: 2rem;
+    order: 2;
+  }
+
+  .footer-text {
+    order: 1;
+  }
+
+  .footer-social-link {
+    font-size: var(--fs-600);
+    padding: 1rem 2rem;
+  }
+
+  .footer-social-link svg {
+    width: 28px;
+    height: 28px;
   }
 }
 

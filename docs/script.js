@@ -14,6 +14,18 @@ if (navToggle && primaryNav) {
     primaryNav.setAttribute("data-visible", String(!isVisible));
     navToggle.setAttribute("aria-expanded", String(!isVisible));
   });
+
+  // Close mobile menu when a navigation link is clicked
+  const navLinks = primaryNav.querySelectorAll("a");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      // Only close menu if it's currently open
+      if (primaryNav.getAttribute("data-visible") === "true") {
+        primaryNav.setAttribute("data-visible", "false");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
 }
 
 /* ==========================================
@@ -85,6 +97,8 @@ const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const nameError = document.querySelector(".error-name");
 const emailError = document.querySelector(".error-email");
+const successMessage = document.querySelector(".success-message");
+const mainForm = document.querySelector(".main-form");
 
 // Email validation regex pattern
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -142,17 +156,21 @@ if (form) {
     // Only proceed if both validations pass
     if (isNameValid && isEmailValid) {
       // Form is valid - show success message
-      alert(
-        "Form submitted successfully! (This is just a test - no backend connected yet)"
-      );
+      successMessage.style.display = "block";
 
-      // When you add a backend, replace the alert above with your submission logic:
+      // Hide the entire main form content (including the paragraph)
+      mainForm.style.display = "none";
+
+      // Scroll to success message
+      successMessage.scrollIntoView({ behavior: "smooth" });
+
+      // When you add a backend, replace this with your submission logic:
       // - Send data to your server
       // - Handle response
       // - Show appropriate success/error messages
 
-      // Optionally reset the form after successful submission
-      // form.reset();
+      // Reset the form (hidden but ready for potential reuse)
+      form.reset();
     }
     // If validation fails, error messages are already shown by the validation functions
   });
