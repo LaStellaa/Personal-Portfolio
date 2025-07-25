@@ -33,7 +33,7 @@ if (navToggle && primaryNav) {
    ========================================== */
 
 const words = ["Web Developer", "Freelancer", "Creative"];
-const colors = ["#16C47F", "#65d690d3", "#CC66DA"];
+const colors = ["#16C47F", "#EB5B00", "#9929EA"];
 let currentWordIndex = 0;
 let currentLetterIndex = 0;
 let isDeleting = false;

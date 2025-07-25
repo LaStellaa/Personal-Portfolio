@@ -1296,7 +1296,7 @@ form textarea {
   /* ========= Projects Section ========= */
 
   .projects-container {
-    max-width: 1200px;
+    max-width: min(1200px, calc(70vw - 4rem));
   }
 
   .project-description-back {
@@ -1338,7 +1338,7 @@ form textarea {
 
   .packages-offers {
     gap: 2rem;
-    width: 1300px;
+    width: 1250px;
   }
 
   .packages-offers > div {
