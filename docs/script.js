@@ -33,7 +33,7 @@ if (navToggle && primaryNav) {
    ========================================== */
 
 const words = ["Web Developer", "Freelancer", "Creative"];
-const colors = ["#fe8e69ff", "#65d690d3", "#b0abe6ff"];
+const colors = ["#16C47F", "#65d690d3", "#CC66DA"];
 let currentWordIndex = 0;
 let currentLetterIndex = 0;
 let isDeleting = false;
@@ -43,7 +43,7 @@ const typingSpeed = 250;
 const deletingSpeed = 180;
 const pauseTime = 1500;
 
-const devMode = true;
+const devMode = false;
 const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
@@ -100,7 +100,6 @@ const emailError = document.querySelector(".error-email");
 const successMessage = document.querySelector(".success-message");
 const mainForm = document.querySelector(".main-form");
 
-// Email validation regex pattern
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // Helper functions to show/hide error messages
@@ -147,7 +146,7 @@ if (form) {
 
   // Handle form submission
   form.addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault();
 
     // Validate both fields
     const isNameValid = validateName();
@@ -155,10 +154,8 @@ if (form) {
 
     // Only proceed if both validations pass
     if (isNameValid && isEmailValid) {
-      // Form is valid - show success message
       successMessage.style.display = "block";
 
-      // Hide the entire main form content (including the paragraph)
       mainForm.style.display = "none";
 
       // Scroll to success message

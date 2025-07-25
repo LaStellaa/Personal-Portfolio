@@ -564,15 +564,21 @@ h1 {
 
 .mobile-social-section {
   margin-top: auto;
-  padding-top: 2rem;
+  margin-left: -3rem;
+  margin-right: 0;
+  padding: 1.2rem 3rem 1.5rem 3rem;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  width: 100%;
+  background-color: black;
+  width: calc(100% + 3rem);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .mobile-social-links {
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
   --gap: 1.5rem;
 }
 
@@ -809,6 +815,12 @@ form textarea {
     padding-left: 5rem;
   }
 
+  .mobile-social-section {
+    margin-left: -5rem;
+    padding: 1.2rem 5rem 1.5rem 5rem;
+    width: calc(100% + 5rem);
+  }
+
   h1 {
     letter-spacing: 0.5px;
   }
@@ -956,6 +968,10 @@ form textarea {
     --gap: 1rem;
   }
 
+  .footer-social {
+    padding-bottom: 0.3rem;
+  }
+
   .footer-social-links {
     order: 1;
     align-self: flex-end;
@@ -964,6 +980,7 @@ form textarea {
   .footer-text {
     order: 2;
     align-self: flex-start;
+    font-size: var(--fs-200);
   }
 
   /* ========= Form Section ========= */
@@ -1024,6 +1041,11 @@ form textarea {
   /* Hide mobile social section on desktop */
   .mobile-social-section {
     display: none;
+  }
+
+  /* Bring footer social icons closer on desktop */
+  .footer-social-links {
+    --gap: 0.3rem;
   }
 
   main {
@@ -1175,6 +1197,25 @@ form textarea {
 
   .footer-social {
     padding: 2.5rem 2rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.2rem;
+  }
+
+  .footer-content {
+    margin-inline: 0.1rem;
+    justify-content: space-between;
+    flex-direction: row;
+    min-width: 100%;
+  }
+
+  .footer-social-links {
+    order: 2;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-text {
+    order: 1;
+    align-self: flex-end;
   }
 }
 
@@ -1197,7 +1238,7 @@ form textarea {
       calc(30% - (10% * ((100vw - 1024px) / (1400px - 1024px)))),
       30%
     );
-    height: 100%;
+    height: 60%;
     padding-left: 2rem;
     padding-right: 0;
     padding-block: 3rem;
@@ -1291,8 +1332,13 @@ form textarea {
 
   /* ========= Packages Section ========= */
 
+  .packages {
+    margin-left: -20%;
+  }
+
   .packages-offers {
-    gap: 3.5rem;
+    gap: 2rem;
+    width: 1300px;
   }
 
   .packages-offers > div {
@@ -1300,7 +1346,7 @@ form textarea {
     min-height: 500px;
   }
   .package-list {
-    width: 340px;
+    width: 380px;
     min-height: 340px;
     padding: 1.6em 1.4em;
   }
@@ -1328,6 +1374,8 @@ form textarea {
 
   .footer-social {
     padding: 3rem 2rem;
+    padding-left: 0.1rem;
+    padding-bottom: 0.2rem;
   }
 
   .footer-content {
@@ -1335,25 +1383,29 @@ form textarea {
     align-items: center;
     justify-content: space-between;
     --gap: 0;
+    margin-inline: 0;
+    min-width: 100%;
   }
 
   .footer-social-links {
     --gap: 2rem;
     order: 2;
+    margin-bottom: 2rem;
   }
 
   .footer-text {
     order: 1;
+    align-self: flex-end;
   }
 
   .footer-social-link {
     font-size: var(--fs-600);
-    padding: 1rem 2rem;
+    padding: 1rem 0.2rem;
   }
 
-  .footer-social-link svg {
-    width: 28px;
-    height: 28px;
+  .footer-social-link img {
+    width: 32px;
+    height: 32px;
   }
 }
 
