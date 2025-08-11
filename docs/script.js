@@ -172,3 +172,32 @@ if (form) {
     // If validation fails, error messages are already shown by the validation functions
   });
 }
+
+/* ==========================================
+   PROJECT CARD LINKS INITIALIZATION
+   ========================================== */
+
+// Ensure project links are properly initialized with robust timing
+function initProjectLinks() {
+  const projectLinks = document.querySelectorAll(".project-card a");
+
+  if (projectLinks.length === 0) {
+    // Retry if links aren't found yet
+    setTimeout(initProjectLinks, 100);
+    return;
+  }
+
+  projectLinks.forEach((link) => {
+    // Ensure links are properly styled and clickable
+    link.style.display = "block";
+    link.style.position = "relative";
+    link.style.zIndex = "999";
+    link.style.cursor = "pointer";
+    link.style.pointerEvents = "auto";
+  });
+}
+
+// Use multiple timing approaches to ensure links work consistently
+document.addEventListener("DOMContentLoaded", initProjectLinks);
+window.addEventListener("load", initProjectLinks);
+setTimeout(initProjectLinks, 500);

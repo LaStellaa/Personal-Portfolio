@@ -240,9 +240,12 @@ header {
   font-size: var(--fs-400);
 }
 
-.primary-navigation a,
-.project-card a {
+.primary-navigation a {
   overflow: hidden;
+}
+
+.project-card a {
+  /* Link styling handled in media queries */
 }
 
 .primary-navigation a {
@@ -377,7 +380,7 @@ h1 {
 
 .card-front {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   background: transparent;
   display: flex;
   flex-direction: column;
@@ -898,7 +901,11 @@ form textarea {
     display: block;
   }
 
-  .project-card:hover .card-inner,
+  .project-card:hover .card-inner {
+    transform: rotateY(180deg);
+    transition-delay: 0.8s;
+  }
+
   .project-card:focus-within .card-inner {
     transform: rotateY(180deg);
   }
@@ -920,9 +927,19 @@ form textarea {
   }
 
   .card-front {
-    z-index: 2;
+    z-index: 3;
     background: #4a4a4a;
     justify-content: flex-start;
+  }
+
+  .card-front a {
+    z-index: 10;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+    cursor: pointer;
   }
 
   .project-title {
@@ -943,7 +960,7 @@ form textarea {
   .card-back {
     background: #4a4a4a;
     transform: rotateY(180deg);
-    z-index: 3;
+    z-index: 2;
     text-align: center;
   }
 
