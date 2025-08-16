@@ -558,6 +558,11 @@ h1 {
     #fec988 47%,
     #f97533 100%
   );
+  /* Explicit color rules for mobile browsers */
+  color: black !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .contact-btn:hover {
@@ -746,6 +751,11 @@ form textarea {
   font-size: var(--fs-500);
   border: none;
   background-color: #d2fba4;
+  /* Explicit color rules for mobile browsers */
+  color: black !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .request-btn:focus {
@@ -755,6 +765,7 @@ form textarea {
 
 .request-btn:hover {
   background-color: #c8f799;
+  color: black !important;
 }
 
 /* ========= Success Message ========= */
@@ -768,6 +779,47 @@ form textarea {
   background: #d2fba4;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================
+   Mobile Browser Fixes
+   =========================== */
+
+/* iOS Safari and other mobile browsers often override button styles */
+@supports (-webkit-touch-callout: none) {
+  .contact-btn,
+  .request-btn {
+    color: black !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .contact-btn:active,
+  .contact-btn:focus,
+  .request-btn:active,
+  .request-btn:focus {
+    color: black !important;
+  }
+}
+
+/* General mobile browser overrides */
+@media (max-width: 767px) {
+  .contact-btn,
+  .request-btn {
+    color: black !important;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .contact-btn:visited,
+  .contact-btn:link,
+  .contact-btn:active,
+  .request-btn:visited,
+  .request-btn:link,
+  .request-btn:active {
+    color: black !important;
+  }
 }
 
 /* ===========================
