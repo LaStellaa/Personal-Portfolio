@@ -244,10 +244,6 @@ header {
   overflow: hidden;
 }
 
-.project-card a {
-  /* Link styling handled in media queries */
-}
-
 .primary-navigation a {
   border-radius: 5px;
 }
@@ -264,7 +260,7 @@ h1 {
   margin-inline: auto;
   word-break: break-word;
   font-weight: 500;
-  font-size: var(--fs-600);
+  font-size: var(--fs-500);
 }
 
 .job-title {
@@ -272,7 +268,7 @@ h1 {
   white-space: nowrap;
   overflow: hidden;
   margin-block: 1rem;
-  min-width: 12ch;
+  min-width: 15ch;
   min-height: 2.4rem;
 }
 
@@ -451,7 +447,7 @@ h1 {
   border: 1.5px solid rgba(198, 127, 28, 0.25);
   border-radius: 12px;
   width: 280px;
-  min-height: 220px;
+  min-height: 270px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1161,11 +1157,11 @@ form textarea {
   .job-title {
     display: inline-flex;
     align-items: center;
-    margin-left: 1.5rem;
+    margin-left: 0.5rem;
     margin-block: 0;
     min-height: 2.4rem;
     vertical-align: middle;
-    min-width: 13ch;
+    min-width: 16ch;
     padding-bottom: 0.5rem;
   }
 
@@ -1250,7 +1246,7 @@ form textarea {
   }
 
   .packages-offers .package-list {
-    min-height: 302px;
+    min-height: 350px;
   }
 
   /* ========= Form Section ========= */
@@ -1443,7 +1439,7 @@ form textarea {
   }
   .package-list {
     width: 360px;
-    min-height: 340px;
+    min-height: 380px;
     padding: 1.6em 1.4em;
   }
   .packages-offers h4 {
@@ -1520,5 +1516,71 @@ form textarea {
   }
   50% {
     opacity: 0;
+  }
+}
+
+/* ===========================
+   Extra Large Screens (1600px+)
+   =========================== */
+
+@media (min-width: 1600px) {
+  .main-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: flex-start;
+  }
+
+  header {
+    margin-left: 4rem;
+    width: clamp(
+      20%,
+      calc(30% - (10% * ((100vw - 1024px) / (1400px - 1024px)))),
+      30%
+    );
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 4rem 2rem;
+    align-self: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ========= Projects Section 1600px+ ========= */
+
+  .projects-container {
+    gap: 3rem;
+    max-width: 1300px;
+  }
+
+  .project-card {
+    padding: 3rem 0 2.5rem 0;
+  }
+
+  /* ========= Packages Section 1600px+ ========= */
+
+  .packages-offers {
+    gap: 3rem;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .packages-offers > div {
+    max-width: 400px;
   }
 }

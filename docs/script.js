@@ -32,7 +32,13 @@ if (navToggle && primaryNav) {
    TYPING EFFECT (for index.html only)
    ========================================== */
 
-const words = ["Web Developer", "Freelancer", "Creative"];
+// Language detection and word arrays
+const isItalian = document.documentElement.lang === "it";
+
+const wordsEN = ["Web Developer", "Freelancer", "Creative"];
+const wordsIT = ["Sviluppatrice Web", "Freelancer", "Creativa"];
+
+const words = isItalian ? wordsIT : wordsEN;
 const colors = ["#16C47F", "#EB5B00", "#9929EA"];
 let currentWordIndex = 0;
 let currentLetterIndex = 0;
