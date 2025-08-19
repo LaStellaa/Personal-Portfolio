@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "title": "Stella Leimer | Sviluppatrice web",
+    "description": "Sono Stella Leimer, sviluppatrice web. Esplora il mio portfolio, dove puoi trovare alcuni dei miei lavori, e contattami per il tuo sito web!",
+    "author": "Stella Leimer"
+  },
+  "navigation": {
+    "menu": "Menu",
+    "about": "chi sono",
+    "projects": "Progetti",
+    "packages": "Soluzioni",
+    "contact": "Contattami"
+  },
+  "hero": {
+    "greeting": "Ciao! Sono Stella, una",
+    "jobTitles": ["Sviluppatrice Web", "Frontend Developer", "UI Designer"],
+    "description": "Creo siti",
+    "modern": "eleganti",
+    "awesome": "moderni",
+    "functional": "funzionali",
+    "callToAction": "e sono pronta a lavorare al tuo prossimo progetto!",
+    "profileAlt": "myself"
+  },
+  "projects": {
+    "sectionTitle": "Alcuni dei miei lavori",
+    "project1": {
+      "title": "News Homepage",
+      "description": "Un layout pulito e moderno per un sito di notizie. Comprende una sezione con articoli in evidenza, una lista delle ultime notizie e effetti hover fluidi. Ottimizzato per dispositivi mobili, tablet e desktop.",
+      "imageAlt": "Screenshot of Article webpage"
+    },
+    "project2": {
+      "title": "E-commerce Shop Homepage",
+      "description": "Una pagina e-commerce per un negozio di scarpe. Include una galleria immagini con le ultime tendenze, una funzione lighbox per i dettagli del prodotto e un carrello per l'acquisto. Completamente responsive e facile da navigare.",
+      "imageAlt": "E-commerce shoes shop webpage"
+    },
+    "project3": {
+      "title": "Single Page Portfolio",
+      "description": "Una pagina Portfolio personale per mostrare i progetti e le competenze. Layout pulito con carosello immagini a scorrimento fluido e ottimizzato per ogni dispositivo.",
+      "imageAlt": "Single page portfolio"
+    },
+    "project4": {
+      "title": "Room Brand Landing Page",
+      "description": "Una landing page per un brand di arredamento. Presenta un layout moderno con immagini in evidenza e una navigazione fluida. Ottimizzato per tutti i dispoasitivi.",
+      "imageAlt": "Room brand landing page"
+    }
+  },
+  "packages": {
+    "sectionTitle": "Soluzioni disponibili",
+    "package1": {
+      "title": "Sito a pagina singola",
+      "features": [
+        "Compatibile con dispositivi mobili",
+        "Modulo di contatto base",
+        "Integrazione pagine social media",
+        "Una revisione"
+      ],
+      "description": "Perfetto per piccole imprese, progetti personali o landing pages.",
+      "price": "A partire da €250"
+    },
+    "package2": {
+      "title": "Sito a pagina multipla",
+      "features": [
+        "Fino a 5 pagine",
+        "Compatibile con tutti i dispositivi",
+        "Modulo di contatto completo",
+        "Ottimizzazione SEO",
+        "Configurazione hosting e dominio",
+        "Due revisioni"
+      ],
+      "description": "Ideale per aziende che necessitano di piu contenuti e funzionalità.",
+      "price": "A partire da €400"
+    },
+    "package3": {
+      "title": "Aggiornamento del sito",
+      "features": [
+        "Modernizzazione del design",
+        "Ottimizzazione per tutti i dispositivi",
+        "Ottimizzazione prestazioni e velocità"
+      ],
+      "description": "Per siti web esistenti che necessitano di una rinfrescata.",
+      "price": "A partire da €200"
+    }
+  },
+  "contact": {
+    "uniqueProject": "Ogni progetto e' unico",
+    "callToAction": "Discutiamo i tuoi obiettivi e costruiamo la soluzione migliore insieme!",
+    "buttonText": "Contattami",
+    "sparkleAlt": "sparkles icon"
+  },
+  "footer": {
+    "copyright": "© 2024 LaStellaa",
+    "linkedinAlt": "LinkedIn",
+    "githubAlt": "GitHub"
+  },
+  "form": {
+    "title": "Modulo di consulenza",
+    "successMessage": "Grazie per il tuo messaggio! Ti risponderò il prima possibile!",
+    "introduction": "Ciao! Inserisci i tuoi dettagli qui sotto e ti ricontatterò il prima possibile — solitamente entro 48 ore.",
+    "nameLabel": "Nome",
+    "nameError": "Per favore inserisci il tuo nome",
+    "emailLabel": "Email",
+    "emailError": "Per favore controlla il tuo indirizzo email",
+    "messageLabel": "Parlami del tuo progetto",
+    "messagePlaceholder": "Che tipo di sito web ti serve?",
+    "submitButton": "Richiedi Consulenza Gratuita",
+    "required": "*"
+  }
+}

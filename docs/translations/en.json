@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "title": "Stella Leimer | Web Developer",
+    "description": "I'm Stella Leimer, a front-end developer. Explore my portfolio, see some of my work and get in touch for your next project.",
+    "author": "Stella Leimer"
+  },
+  "navigation": {
+    "menu": "Menu",
+    "about": "About",
+    "projects": "Projects",
+    "packages": "Packages",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi! I'm Stella and i am a",
+    "jobTitles": ["Web Developer", "Frontend Developer", "UI Designer"],
+    "description": "I create",
+    "modern": "modern",
+    "awesome": "awesome",
+    "functional": "functional",
+    "callToAction": "websites and i would love to work on your next project!",
+    "profileAlt": "myself"
+  },
+  "projects": {
+    "sectionTitle": "Some of my work",
+    "project1": {
+      "title": "News Homepage",
+      "description": "A clean and modern news website layout. It has a featured article section, a list of the latest news, and smooth hover effects. Fully responsive across mobile, tablet, and desktop screens.",
+      "imageAlt": "Screenshot of Article webpage"
+    },
+    "project2": {
+      "title": "E-commerce Shop Homepage",
+      "description": "A simple and interactive product page for an online store. It includes an image gallery with a lightbox, product details, and a shopping cart feature. Fully responsive and user-friendly.",
+      "imageAlt": "E-commerce shoes shop webpage"
+    },
+    "project3": {
+      "title": "Single Page Portfolio",
+      "description": "A personal portfolio page to showcase projects and skills. Clean layout with smooth scrolling and responsive design, making it easy to view on any device.",
+      "imageAlt": "Single page portfolio"
+    },
+    "project4": {
+      "title": "Room Brand Landing Page",
+      "description": "A stylish landing page for a furniture brand. It features a modern layout with hero images, product highlights, and smooth navigation. Fully responsive for all screen sizes.",
+      "imageAlt": "Room brand landing page"
+    }
+  },
+  "packages": {
+    "sectionTitle": "Available Packages",
+    "package1": {
+      "title": "One-Page Website",
+      "features": [
+        "Basic Responsive Design",
+        "Simple Contact Form",
+        "Social Media Integration",
+        "One Revision"
+      ],
+      "description": "Perfect for small businesses, personal projects, or landing pages.",
+      "price": "Starting from $250"
+    },
+    "package2": {
+      "title": "Multi-page Website",
+      "features": [
+        "Up to 5 pages",
+        "Advance Responsive Design",
+        "Complete contact Form",
+        "SEO Optimization",
+        "Hosting setup",
+        "Two Revisions"
+      ],
+      "description": "Ideal for businesses needing more content and features.",
+      "price": "Starting from $400"
+    },
+    "package3": {
+      "title": "Website Refresh",
+      "features": [
+        "Design Improvements",
+        "Mobile Responsiveness Check",
+        "Performance & Speed Optimization"
+      ],
+      "description": "For existing websites needing a facelift.",
+      "price": "Starting from $200"
+    }
+  },
+  "contact": {
+    "uniqueProject": "Every project is unique",
+    "callToAction": "Let's discuss your goals and build the best solution together!",
+    "buttonText": "Contact me",
+    "sparkleAlt": "sparkles icon"
+  },
+  "footer": {
+    "copyright": "© 2024 LaStellaa",
+    "linkedinAlt": "LinkedIn",
+    "githubAlt": "GitHub"
+  },
+  "form": {
+    "title": "Consultation form",
+    "successMessage": "Thank you for your message! I'll get back to you as soon as possible!",
+    "introduction": "Hey! Drop your details below, and I'll get back to you as soon as possible — usually within 48 hours.",
+    "nameLabel": "Name",
+    "nameError": "Please enter your name",
+    "emailLabel": "Email",
+    "emailError": "Please check your email address",
+    "messageLabel": "Tell me about your project",
+    "messagePlaceholder": "What type of website do you need?",
+    "submitButton": "Request Free Consultation",
+    "required": "*"
+  }
+}

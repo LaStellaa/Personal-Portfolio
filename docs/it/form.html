@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,8 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./index.css" />
-    <title>Consultation form</title>
+    <link rel="stylesheet" href="../index.css" />
+    <title>Modulo di consulenza</title>
   </head>
   <body class="body-form">
     <!-- Language Switcher -->
@@ -18,26 +18,24 @@
       <ul class="language-menu">
         <li><span class="language-icon">🌐</span></li>
         <li><a href="/" class="lang-link" data-lang="en">EN</a></li>
-        <li><a href="/it/" class="lang-link" data-lang="it">IT</a></li>
+        <li><a href="/it/" class="lang-link active" data-lang="it">IT</a></li>
         <li><a href="/es/" class="lang-link" data-lang="es">ES</a></li>
         <li><a href="/fr/" class="lang-link" data-lang="fr">FR</a></li>
       </ul>
     </div>
 
     <div class="success-message">
-      <p>
-        Thank you for your message! I’ll get back to you as soon as possible!
-      </p>
+      <p>Grazie per il tuo messaggio! Ti risponderò il prima possibile!</p>
     </div>
     <main class="main-form flex">
       <p>
-        Hey! Drop your details below, and I’ll get back to you as soon as
-        possible — usually within 48 hours.
+        Ciao! Inserisci i tuoi dettagli qui sotto e ti ricontatterò il prima
+        possibile — solitamente entro 48 ore.
       </p>
       <form action="javascript:void(0);" method="post" class="flex" novalidate>
-        <label for="name" class="uppercase">Name *</label>
+        <label for="name" class="uppercase">Nome *</label>
         <p class="error-name" id="name-error" role="alert" aria-live="polite">
-          Please enter your name
+          Per favore inserisci il tuo nome
         </p>
         <input
           type="text"
@@ -49,7 +47,7 @@
 
         <label for="email" class="uppercase">Email *</label>
         <p class="error-email" id="email-error" role="alert" aria-live="polite">
-          Please check your email address
+          Per favore controlla il tuo indirizzo email
         </p>
         <input
           type="email"
@@ -59,21 +57,19 @@
           aria-describedby="email-error"
         />
 
-        <label for="message" class="uppercase"
-          >Tell me about your project</label
-        >
+        <label for="message" class="uppercase">Parlami del tuo progetto</label>
         <textarea
           id="message"
           name="message"
           rows="4"
-          placeholder="What type of website do you need?"
+          placeholder="Che tipo di sito web ti serve?"
         ></textarea>
 
         <button type="submit" class="request-btn">
-          Request Free Consultation
+          Richiedi Consulenza Gratuita
         </button>
       </form>
     </main>
-    <script src="./script.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>

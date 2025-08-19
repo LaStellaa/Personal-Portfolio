@@ -47,6 +47,83 @@
   box-sizing: border-box;
 }
 
+/* Language Switcher */
+.language-switcher {
+  position: fixed;
+  top: 1rem;
+  right: 1.25rem;
+  z-index: 9999;
+}
+
+.language-menu {
+  display: flex;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.language-menu li {
+  margin: 0;
+}
+
+.language-icon {
+  display: inline-block;
+  padding: 0.25rem 0;
+  font-size: 0.875rem;
+  color: #666;
+  opacity: 0.8;
+  vertical-align: middle;
+  line-height: 1.2;
+}
+
+.lang-link {
+  display: block;
+  padding: 0.25rem 0;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lang-link:hover {
+  color: #16c47f;
+}
+
+.lang-link.active {
+  color: #333;
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .language-switcher {
+    top: 0.75rem;
+    right: 1rem;
+  }
+
+  .language-menu {
+    gap: 0.5rem;
+  }
+
+  .language-icon {
+    font-size: 0.75rem;
+    padding: 0.2rem 0;
+    vertical-align: baseline;
+    line-height: 1;
+    transform: translateY(-1px);
+  }
+
+  .lang-link {
+    font-size: 0.75rem;
+    padding: 0.2rem 0;
+  }
+}
+
 /* Reset margins */
 body,
 h1,
@@ -1086,6 +1163,7 @@ form textarea {
     position: relative;
     text-decoration: none;
     font-size: 1rem;
+    white-space: nowrap;
   }
 
   .primary-navigation a::after {
@@ -1570,17 +1648,5 @@ form textarea {
 
   .project-card {
     padding: 3rem 0 2.5rem 0;
-  }
-
-  /* ========= Packages Section 1600px+ ========= */
-
-  .packages-offers {
-    gap: 3rem;
-    max-width: 1300px;
-    margin: 0 auto;
-  }
-
-  .packages-offers > div {
-    max-width: 400px;
   }
 }

@@ -34,11 +34,24 @@ if (navToggle && primaryNav) {
 
 // Language detection and word arrays
 const isItalian = document.documentElement.lang === "it";
+const isSpanish = document.documentElement.lang === "es";
+const isFrench = document.documentElement.lang === "fr";
 
 const wordsEN = ["Web Developer", "Freelancer", "Creative"];
 const wordsIT = ["Sviluppatrice Web", "Freelancer", "Creativa"];
+const wordsES = ["Desarrolladora Web", "Freelancer", "Creativa"];
+const wordsFR = ["Développeuse Web", "Freelancer", "Créative"];
 
-const words = isItalian ? wordsIT : wordsEN;
+let words;
+if (isItalian) {
+  words = wordsIT;
+} else if (isSpanish) {
+  words = wordsES;
+} else if (isFrench) {
+  words = wordsFR;
+} else {
+  words = wordsEN;
+}
 const colors = ["#16C47F", "#EB5B00", "#9929EA"];
 let currentWordIndex = 0;
 let currentLetterIndex = 0;
@@ -207,3 +220,67 @@ function initProjectLinks() {
 document.addEventListener("DOMContentLoaded", initProjectLinks);
 window.addEventListener("load", initProjectLinks);
 setTimeout(initProjectLinks, 500);
+
+/* ==========================================
+   LANGUAGE SWITCHER
+   ========================================== */
+
+// Handle language switching with intelligent URL mapping
+function initLanguageSwitcher() {
+  const langLinks = document.querySelectorAll(".lang-link");
+  const currentPath = window.location.pathname;
+  const currentPage = getCurrentPageType();
+
+  // Set active language based on current URL
+  setActiveLanguage(langLinks);
+
+  // Add click handlers
+  langLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetLang = link.dataset.lang;
+      const targetUrl = buildTargetUrl(targetLang, currentPage);
+      window.location.href = targetUrl;
+    });
+  });
+}
+
+// Detect current page type (homepage or form)
+function getCurrentPageType() {
+  const path = window.location.pathname;
+  if (path.includes("form")) {
+    return "form";
+  }
+  return "home";
+}
+
+// Build correct URL for target language and page
+function buildTargetUrl(targetLang, pageType) {
+  const baseUrl = window.location.origin;
+
+  if (targetLang === "en") {
+    // English is at root
+    return pageType === "form" ? `${baseUrl}/form.html` : `${baseUrl}/`;
+  } else {
+    // Other languages in subfolders
+    const pageName = pageType === "form" ? "form.html" : "";
+    return `${baseUrl}/${targetLang}/${pageName}`;
+  }
+}
+
+// Set active language indicator
+function setActiveLanguage(langLinks) {
+  const currentPath = window.location.pathname;
+  let activeLang = "en"; // default
+
+  if (currentPath.includes("/it/")) activeLang = "it";
+  else if (currentPath.includes("/es/")) activeLang = "es";
+  else if (currentPath.includes("/fr/")) activeLang = "fr";
+
+  langLinks.forEach((link) => {
+    link.classList.toggle("active", link.dataset.lang === activeLang);
+  });
+}
+
+// Initialize language switcher when DOM is ready
+document.addEventListener("DOMContentLoaded", initLanguageSwitcher);

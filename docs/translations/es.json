@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Stella Leimer | Desarrolladora Web",
+    "description": "Soy Stella Leimer, desarrolladora front-end. Explora mi portafolio, ve algunos de mis trabajos y ponte en contacto para tu próximo proyecto.",
+    "author": "Stella Leimer"
+  },
+  "navigation": {
+    "menu": "Menú",
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "packages": "Paquetes",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "[TO TRANSLATE] Hi! I'm Stella and i am a",
+    "jobTitles": [
+      "Desarrolladora Web",
+      "Desarrolladora Frontend",
+      "Diseñadora UI"
+    ],
+    "description": "[TO TRANSLATE] I create",
+    "modern": "[TO TRANSLATE] modern",
+    "awesome": "[TO TRANSLATE] awesome",
+    "functional": "[TO TRANSLATE] functional",
+    "callToAction": "[TO TRANSLATE] websites and i would love to work on your next project!",
+    "profileAlt": "myself"
+  },
+  "projects": {
+    "sectionTitle": "[TO TRANSLATE] Some of my work",
+    "project1": {
+      "title": "News Homepage",
+      "description": "[TO TRANSLATE] A clean and modern news website layout...",
+      "imageAlt": "Screenshot of Article webpage"
+    },
+    "project2": {
+      "title": "E-commerce Shop Homepage",
+      "description": "[TO TRANSLATE] A simple and interactive product page...",
+      "imageAlt": "E-commerce shoes shop webpage"
+    },
+    "project3": {
+      "title": "Single Page Portfolio",
+      "description": "[TO TRANSLATE] A personal portfolio page to showcase...",
+      "imageAlt": "Single page portfolio"
+    },
+    "project4": {
+      "title": "Room Brand Landing Page",
+      "description": "[TO TRANSLATE] A stylish landing page for a furniture brand...",
+      "imageAlt": "Room brand landing page"
+    }
+  },
+  "packages": {
+    "sectionTitle": "[TO TRANSLATE] Available Packages",
+    "package1": {
+      "title": "[TO TRANSLATE] One-Page Website",
+      "features": [
+        "[TO TRANSLATE] Basic Responsive Design",
+        "[TO TRANSLATE] Simple Contact Form",
+        "[TO TRANSLATE] Social Media Integration",
+        "[TO TRANSLATE] One Revision"
+      ],
+      "description": "[TO TRANSLATE] Perfect for small businesses, personal projects, or landing pages.",
+      "price": "[TO TRANSLATE] Starting from $250"
+    },
+    "package2": {
+      "title": "[TO TRANSLATE] Multi-page Website",
+      "features": [
+        "[TO TRANSLATE] Up to 5 pages",
+        "[TO TRANSLATE] Advance Responsive Design",
+        "[TO TRANSLATE] Complete contact Form",
+        "[TO TRANSLATE] SEO Optimization",
+        "[TO TRANSLATE] Hosting setup",
+        "[TO TRANSLATE] Two Revisions"
+      ],
+      "description": "[TO TRANSLATE] Ideal for businesses needing more content and features.",
+      "price": "[TO TRANSLATE] Starting from $400"
+    },
+    "package3": {
+      "title": "[TO TRANSLATE] Website Refresh",
+      "features": [
+        "[TO TRANSLATE] Design Improvements",
+        "[TO TRANSLATE] Mobile Responsiveness Check",
+        "[TO TRANSLATE] Performance & Speed Optimization"
+      ],
+      "description": "[TO TRANSLATE] For existing websites needing a facelift.",
+      "price": "[TO TRANSLATE] Starting from $200"
+    }
+  },
+  "contact": {
+    "uniqueProject": "[TO TRANSLATE] Every project is unique",
+    "callToAction": "[TO TRANSLATE] Let's discuss your goals and build the best solution together!",
+    "buttonText": "[TO TRANSLATE] Contact me",
+    "sparkleAlt": "sparkles icon"
+  },
+  "footer": {
+    "copyright": "© 2024 LaStellaa",
+    "linkedinAlt": "LinkedIn",
+    "githubAlt": "GitHub"
+  },
+  "form": {
+    "title": "Formulario de consulta",
+    "successMessage": "[TO TRANSLATE] Thank you for your message! I'll get back to you as soon as possible!",
+    "introduction": "[TO TRANSLATE] Hey! Drop your details below, and I'll get back to you as soon as possible — usually within 48 hours.",
+    "nameLabel": "[TO TRANSLATE] Name",
+    "nameError": "[TO TRANSLATE] Please enter your name",
+    "emailLabel": "Email",
+    "emailError": "[TO TRANSLATE] Please check your email address",
+    "messageLabel": "[TO TRANSLATE] Tell me about your project",
+    "messagePlaceholder": "[TO TRANSLATE] What type of website do you need?",
+    "submitButton": "[TO TRANSLATE] Request Free Consultation",
+    "required": "*"
+  }
+}

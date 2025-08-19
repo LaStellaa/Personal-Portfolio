@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,11 +10,11 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./index.css" />
-    <title>Stella Leimer | Web Developer</title>
+    <link rel="stylesheet" href="../index.css" />
+    <title>Stella Leimer | Sviluppatrice web</title>
     <meta
       name="description"
-      content="I'm Stella Leimer, a front-end developer. Explore my portfolio, see some of my work and get in touch for your next project. "
+      content="Sono Stella Leimer, sviluppatrice web. Esplora il mio portfolio, dove puoi trovare alcuni dei miei lavori, e contattami per il tuo sito web!"
     />
 
     <meta name="author" content="Stella Leimer" />
@@ -28,21 +28,21 @@
     <link rel="alternate" hreflang="x-default" href="/" />
 
     <!-- Open Graph meta tags -->
-    <meta property="og:title" content="Stella Leimer | Web Developer" />
+    <meta property="og:title" content="Stella Leimer | Sviluppatrice web" />
     <meta
       property="og:description"
-      content="I'm Stella Leimer, a front-end developer. Explore my portfolio, see some of my work and get in touch for your next project."
+      content="Sono Stella Leimer, sviluppatrice web. Esplora il mio portfolio, dove puoi trovare alcuni dei miei lavori, e contattami per il tuo sito web!"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="/" />
+    <meta property="og:url" content="/it/" />
     <meta property="og:image" content="/images/avatar.avif" />
 
     <!-- Twitter Card meta tags -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Stella Leimer | Web Developer" />
+    <meta name="twitter:title" content="Stella Leimer | Sviluppatrice web" />
     <meta
       name="twitter:description"
-      content="I'm Stella Leimer, a front-end developer. Explore my portfolio, see some of my work and get in touch for your next project."
+      content="Sono Stella Leimer, sviluppatrice web. Esplora il mio portfolio, dove puoi trovare alcuni dei miei lavori, e contattami per il tuo sito web!"
     />
   </head>
   <body class="flex">
@@ -50,8 +50,8 @@
     <div class="language-switcher">
       <ul class="language-menu">
         <li><span class="language-icon">🌐</span></li>
-        <li><a href="/" class="lang-link active" data-lang="en">EN</a></li>
-        <li><a href="/it/" class="lang-link" data-lang="it">IT</a></li>
+        <li><a href="/" class="lang-link" data-lang="en">EN</a></li>
+        <li><a href="/it/" class="lang-link active" data-lang="it">IT</a></li>
         <li><a href="/es/" class="lang-link" data-lang="es">ES</a></li>
         <li><a href="/fr/" class="lang-link" data-lang="fr">FR</a></li>
       </ul>
@@ -61,7 +61,7 @@
       <header class="flex">
         <div class="logo-container flex">
           <img
-            src="./images/personal-logo.png"
+            src="../images/personal-logo.png"
             alt="personal logo"
             class="logo"
           />
@@ -80,10 +80,12 @@
             data-visible="false"
             class="primary-navigation flex"
           >
-            <li class="active uppercase"><a href="#about">About</a></li>
-            <li class="uppercase"><a href="#projects">Projects</a></li>
-            <li class="uppercase"><a href="#packages">Packages</a></li>
-            <li class="uppercase"><a href="#contact">Contact</a></li>
+            <li class="active uppercase">
+              <a href="#about">chi sono</a>
+            </li>
+            <li class="uppercase"><a href="#projects">Progetti</a></li>
+            <li class="uppercase"><a href="#packages">Soluzioni</a></li>
+            <li class="uppercase"><a href="#contact">Contattami</a></li>
 
             <!-- Social links for mobile menu only -->
             <div class="mobile-social-section">
@@ -95,7 +97,7 @@
                   class="social-link"
                 >
                   <img
-                    src="./images/linkedin.svg"
+                    src="../images/linkedin.svg"
                     alt="LinkedIn"
                     width="24"
                     height="24"
@@ -108,7 +110,7 @@
                   class="social-link"
                 >
                   <img
-                    src="./images/github.svg"
+                    src="../images/github.svg"
                     alt="GitHub"
                     width="24"
                     height="24"
@@ -122,7 +124,7 @@
       <main class="flex">
         <section class="hero" id="about">
           <h1>
-            Hi! I'm Stella and i am a
+            Ciao! Sono Stella, una
             <span class="uppercase job-title"
               ><span class="text"></span
               ><span class="cursor" aria-hidden="true">|</span></span
@@ -130,18 +132,18 @@
           </h1>
           <div class="about-container flex">
             <p class="about-text">
-              I create
-              <span id="modern">modern</span>,
-              <span id="awesome">awesome</span>,
-              <span id="functional">functional</span>
+              Creo siti
+              <span id="modern">eleganti</span>,
+              <span id="awesome">moderni</span> e
+              <span id="functional">funzionali</span>,
               <span id="text-span"
-                >websites and i would love to work on your next project!</span
+                >e sono pronta a lavorare al tuo prossimo progetto!</span
               >
             </p>
             <img
               class="profile-image"
-              src="./images/avatar.avif"
-              alt="Stella Leimer - Web Developer"
+              src="../images/avatar.avif"
+              alt="Stella Leimer - Sviluppatrice web"
               loading="lazy"
               decoding="async"
               width="200"
@@ -151,7 +153,7 @@
         </section>
 
         <section class="projects" id="projects">
-          <h2>Some of my work</h2>
+          <h2>Alcuni dei miei lavori</h2>
           <div class="projects-container">
             <!-- Project 1 -->
             <article class="project-card">
@@ -163,7 +165,7 @@
                     rel="noopener noreferrer"
                   >
                     <img
-                      src="./images/projects/news-homapage.png"
+                      src="../images/projects/news-homapage.png"
                       alt="Screenshot of Article webpage"
                       class="project-image project-image-news"
                     />
@@ -172,19 +174,19 @@
                 <div class="card-back">
                   <h3 class="project-title-back">News Homepage</h3>
                   <p class="project-description-back">
-                    A clean and modern news website layout. It has a featured
-                    article section, a list of the latest news, and smooth hover
-                    effects. Fully responsive across mobile, tablet, and desktop
-                    screens.
+                    Un layout pulito e moderno per un sito di notizie. Comprende
+                    una sezione con articoli in evidenza, una lista delle ultime
+                    notizie e effetti hover fluidi. Ottimizzato per dispositivi
+                    mobili, tablet e desktop.
                   </p>
                 </div>
               </div>
               <h3 class="project-title">News Homepage</h3>
               <p class="project-description">
-                A clean and modern news website layout. It has a featured
-                article section, a list of the latest news, and smooth hover
-                effects. Fully responsive across mobile, tablet, and desktop
-                screens.
+                Un layout pulito e moderno per un sito di notizie. Comprende una
+                sezione con articoli in evidenza, una lista delle ultime notizie
+                e effetti hover fluidi. Ottimizzato per dispositivi mobili,
+                tablet e desktop.
               </p>
             </article>
             <!-- Project 2 -->
@@ -197,7 +199,7 @@
                     rel="noopener noreferrer"
                   >
                     <img
-                      src="./images/projects/e-commerce-shop.png"
+                      src="../images/projects/e-commerce-shop.png"
                       alt="E-commerce shoes shop webpage"
                       class="project-image"
                     />
@@ -206,18 +208,19 @@
                 <div class="card-back">
                   <h3 class="project-title-back">E-commerce Shop Homepage</h3>
                   <p class="project-description-back">
-                    A simple and interactive product page for an online store.
-                    It includes an image gallery with a lightbox, product
-                    details, and a shopping cart feature. Fully responsive and
-                    user-friendly.
+                    Una pagina e-commerce per un negozio di scarpe. Include una
+                    galleria immagini con le ultime tendenze, una funzione
+                    lighbox per i dettagli del prodotto e un carrello per
+                    l'acquisto. Completamente responsive e facile da navigare.
                   </p>
                 </div>
               </div>
               <h3 class="project-title">E-commerce Shop Homepage</h3>
               <p class="project-description">
-                A simple and interactive product page for an online store. It
-                includes an image gallery with a lightbox, product details, and
-                a shopping cart feature. Fully responsive and user-friendly.
+                Una pagina e-commerce per un negozio di scarpe. Include una
+                galleria immagini con le ultime tendenze, una funzione lighbox
+                per i dettagli del prodotto e un carrello per l'acquisto.
+                Completamente responsive e facile da navigare.
               </p>
             </article>
             <!-- Project 3 -->
@@ -230,7 +233,7 @@
                     rel="noopener noreferrer"
                   >
                     <img
-                      src="./images/projects/single-page-portfolio.png"
+                      src="../images/projects/single-page-portfolio.png"
                       alt="Single page portfolio"
                       class="project-image project-image-portfolio"
                     />
@@ -239,17 +242,17 @@
                 <div class="card-back">
                   <h3 class="project-title-back">Single Page Portfolio</h3>
                   <p class="project-description-back">
-                    A personal portfolio page to showcase projects and skills.
-                    Clean layout with smooth scrolling and responsive design,
-                    making it easy to view on any device.
+                    Una pagina Portfolio personale per mostrare i progetti e le
+                    competenze. Layout pulito con carosello immagini a
+                    scorrimento fluido e ottimizzato per ogni dispositivo.
                   </p>
                 </div>
               </div>
               <h3 class="project-title">Single Page Portfolio</h3>
               <p class="project-description">
-                A personal portfolio page to showcase projects and skills. Clean
-                layout with smooth scrolling and responsive design, making it
-                easy to view on any device.
+                Una pagina Portfolio personale per mostrare i progetti e le
+                competenze. Layout pulito con carosello immagini a scorrimento
+                fluido e ottimizzato per ogni dispositivo.
               </p>
             </article>
             <!-- Project 4 -->
@@ -262,7 +265,7 @@
                     rel="noopener noreferrer"
                   >
                     <img
-                      src="./images/projects/room-branding-landing-page.png"
+                      src="../images/projects/room-branding-landing-page.png"
                       alt="Room brand landing page"
                       class="project-image"
                     />
@@ -271,71 +274,72 @@
                 <div class="card-back">
                   <h3 class="project-title-back">Room Brand Landing Page</h3>
                   <p class="project-description-back">
-                    A stylish landing page for a furniture brand. It features a
-                    modern layout with hero images, product highlights, and
-                    smooth navigation. Fully responsive for all screen sizes.
+                    Una landing page per un brand di arredamento. Presenta un
+                    layout moderno con immagini in evidenza e una navigazione
+                    fluida. Ottimizzato per tutti i dispoasitivi.
                   </p>
                 </div>
               </div>
               <h3 class="project-title">Room Brand Landing Page</h3>
               <p class="project-description">
-                A stylish landing page for a furniture brand. It features a
-                modern layout with hero images, product highlights, and smooth
-                navigation. Fully responsive for all screen sizes.
+                Una landing page per un brand di arredamento. Presenta un layout
+                moderno con immagini in evidenza e una navigazione fluida.
+                Ottimizzato per tutti i dispoasitivi.
               </p>
             </article>
           </div>
         </section>
 
         <section class="packages flex" id="packages">
-          <h3>Available Packages</h3>
+          <h3>Soluzioni disponibili</h3>
           <div class="packages-offers flex">
             <div class="package-one">
               <div class="package-header">
-                <h4>One-Page Website</h4>
+                <h4>Sito a pagina singola</h4>
               </div>
               <ul class="package-list">
-                <li>Basic Responsive Design</li>
-                <li>Simple Contact Form</li>
-                <li>Social Media Integration</li>
-                <li>One Revision</li>
+                <li>Compatibile con dispositivi mobili</li>
+                <li>Modulo di contatto base</li>
+                <li>Integrazione pagine social media</li>
+                <li>Una revisione</li>
               </ul>
               <p class="package-desc">
-                Perfect for small businesses, personal projects, or landing
+                Perfetto per piccole imprese, progetti personali o landing
                 pages.
               </p>
-              <p class="package-price">Starting from $250</p>
+              <p class="package-price">A partire da €250</p>
             </div>
             <div class="package-two">
               <div class="package-header">
-                <h4>Multi-page Website</h4>
+                <h4>Sito a pagina multipla</h4>
               </div>
               <ul class="package-list">
-                <li>Up to 5 pages</li>
-                <li>Advance Responsive Design</li>
-                <li>Complete contact Form</li>
-                <li>SEO Optimization</li>
-                <li>Hosting setup</li>
-                <li>Two Revisions</li>
+                <li>Fino a 5 pagine</li>
+                <li>Compatibile con tutti i dispositivi</li>
+                <li>Modulo di contatto completo</li>
+                <li>Ottimizzazione SEO</li>
+                <li>Configurazione hosting e dominio</li>
+                <li>Due revisioni</li>
               </ul>
               <p class="package-desc">
-                Ideal for businesses needing more content and features.
+                Ideale per aziende che necessitano di piu contenuti e
+                funzionalità.
               </p>
-              <p class="package-price">Starting from $400</p>
+              <p class="package-price">A partire da €400</p>
             </div>
             <div class="package-three">
               <div class="package-header">
-                <h4>Website Refresh</h4>
+                <h4>Aggiornamento del sito</h4>
               </div>
               <ul class="package-list">
-                <li>Design Improvements</li>
-                <li>Mobile Responsiveness Check</li>
-                <li>Performance & Speed Optimization</li>
+                <li>Modernizzazione del design</li>
+                <li>Ottimizzazione per tutti i dispositivi</li>
+                <li>Ottimizzazione prestazioni e velocità</li>
               </ul>
               <p class="package-desc">
-                For existing websites needing a facelift.
+                Per siti web esistenti che necessitano di una rinfrescata.
               </p>
-              <p class="package-price">Starting from $200</p>
+              <p class="package-price">A partire da €200</p>
             </div>
           </div>
         </section>
@@ -344,27 +348,27 @@
     <section class="contact flex" id="contact">
       <div class="solution-container flex">
         <img
-          src="./images/sparkle.svg"
+          src="../images/sparkle.svg"
           alt="sparkles icon"
           class="sparkle-icon"
         />
 
-        <h2 class="contact-paragraph">Every project is unique</h2>
+        <h2 class="contact-paragraph">Ogni progetto e' unico</h2>
         <img
-          src="./images/sparkle.svg"
+          src="../images/sparkle.svg"
           alt="sparkles icon"
           class="sparkle-icon sparkle-icon-two"
         />
       </div>
       <h3 class="last-paragraph">
-        Let's discuss your goals and build the best solution together!
+        Discutiamo i tuoi obiettivi e costruiamo la soluzione migliore insieme!
       </h3>
       <button
         class="contact-btn uppercase"
         type="button"
         onclick="window.location.href='form.html'"
       >
-        Contact me
+        Contattami
       </button>
     </section>
     <footer class="footer-social">
@@ -377,7 +381,7 @@
             class="footer-social-link"
           >
             <img
-              src="./images/linkedin.svg"
+              src="../images/linkedin.svg"
               alt="LinkedIn"
               width="24"
               height="24"
@@ -390,7 +394,7 @@
             class="footer-social-link"
           >
             <img
-              src="./images/github.svg"
+              src="../images/github.svg"
               alt="GitHub"
               width="24"
               height="24"
@@ -400,6 +404,6 @@
         <p class="footer-text">© 2024 LaStellaa</p>
       </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>
