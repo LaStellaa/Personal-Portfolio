@@ -173,20 +173,45 @@ if (form) {
 
     // Only proceed if both validations pass
     if (isNameValid && isEmailValid) {
-      successMessage.style.display = "block";
+      // Show loading state
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton.textContent;
+      submitButton.textContent = "Sending...";
+      submitButton.disabled = true;
 
-      mainForm.style.display = "none";
+      // Submit to Formspree
+      const formData = new FormData(form);
 
-      // Scroll to success message
-      successMessage.scrollIntoView({ behavior: "smooth" });
-
-      // When you add a backend, replace this with your submission logic:
-      // - Send data to your server
-      // - Handle response
-      // - Show appropriate success/error messages
-
-      // Reset the form (hidden but ready for potential reuse)
-      form.reset();
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            // Success - show success message
+            successMessage.style.display = "block";
+            mainForm.style.display = "none";
+            successMessage.scrollIntoView({ behavior: "smooth" });
+            form.reset();
+          } else {
+            throw new Error("Form submission failed");
+          }
+        })
+        .catch((error) => {
+          // Error handling
+          console.error("Form submission error:", error);
+          alert(
+            "Sorry, there was an error sending your message. Please try again or contact me directly."
+          );
+        })
+        .finally(() => {
+          // Reset button state
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+        });
     }
     // If validation fails, error messages are already shown by the validation functions
   });
